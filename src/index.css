@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background-color: #0b0f17;
+  color: #f1f5f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0b0f17;
+  color: #f1f5f9;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+@layer components {
+  .glass-panel {
+    @apply border border-white/10 bg-white/[0.04] shadow-[0_18px_48px_rgba(0,0,0,0.22)] backdrop-blur-xl;
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 border border-blue-400/20 bg-blue-400/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-blue-300;
+  }
+}
+
+.site-root {
+  color: #f1f5f9;
+  background: #0b0f17;
+}
+
+.site-root #sistema {
+  position: relative;
+  background: linear-gradient(180deg, #0b0f19 0%, #111827 220px, #0b0f17 100%);
+}
+
+.site-root input[type='number'] {
+  color-scheme: dark;
+}
+
+.site-root input[type='range'] {
+  accent-color: #60a5fa;
+}
+
+::selection {
+  background: rgba(96, 165, 250, 0.35);
+  color: #f8fafc;
+}
